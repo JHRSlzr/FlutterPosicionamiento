@@ -20,6 +20,7 @@ class _controlesState extends State<ControlesPage> {
         setState(() {
           position = 0;
           orientation = 0;
+
           orientationStatus = 'ORIENTACIÓN: Norte';
           positionStatus = 'ESTADO: -------';
         })
@@ -28,7 +29,7 @@ class _controlesState extends State<ControlesPage> {
   void upAction() => {
         setState(() {
           position++;
-
+        
           if (position >= limSup) {
             position = 10;
             positionStatus = 'ESTADO: LIMITE SUPERIOR';
@@ -87,6 +88,7 @@ class _controlesState extends State<ControlesPage> {
   void turnLeft() => {
         setState(() {
           orientation--;
+          
           if (orientation < 0) orientation = 3;
 
           switch (orientation) {
